@@ -1,0 +1,17 @@
+.profile {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .profile {
+    display: flex;
+
+    width: 282px;
+    margin: auto;
+
+    flex-wrap: wrap;
+  }
+}
