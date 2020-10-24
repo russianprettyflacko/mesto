@@ -21,6 +21,12 @@ btnPopupClose.addEventListener('click', function() {
   popup.classList.remove('popup-wrapper_active');
 });
 
+popup.addEventListener('click', function(event) {
+  if (!document.querySelector('.popup').contains(event.target) && popup.classList.contains('popup-wrapper_active')){
+    popup.classList.remove('popup-wrapper_active');
+  }
+});
+
 function formSubmitHandler(evt) {
   evt.preventDefault();
 
