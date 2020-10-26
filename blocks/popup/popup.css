@@ -1,14 +1,9 @@
 .popup {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
 
   box-sizing: border-box;
   width: 100%;
   max-width: 430px;
-  max-height: 330px;
   margin: auto;
   padding: 34px 36px 36px;
 
@@ -20,7 +15,6 @@
 @media (max-width: 767px) {
   .popup {
     width: calc(100% - 38px);
-    max-height: 325px;
     padding: 27px 22px 40px;
   }
 }

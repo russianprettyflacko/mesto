@@ -7,8 +7,6 @@
 
 @media (max-width: 767px) {
   .profile {
-    display: flex;
-
     width: 282px;
     margin: auto;
 

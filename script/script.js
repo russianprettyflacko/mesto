@@ -1,4 +1,5 @@
 let popup = document.querySelector('.popup-wrapper');
+let popupWindow = document.querySelector('.popup');
 let formElement = document.querySelector('.profile-edit');
 
 let btnProfileEdit = document.querySelector('.profile-info__edit-button');
@@ -10,30 +11,32 @@ let jobField = document.querySelector('.profile-info__subtitle');
 let nameInput = document.querySelector('#profile-edit__title');
 let jobInput = document.querySelector('#profile-edit__subtitle');
 
-btnProfileEdit.addEventListener('click', function() {
+function openProfilEdit(){
   nameInput.value = nameField.textContent;
   jobInput.value = jobField.textContent;
 
   popup.classList.add('popup-wrapper_active');
-});
+}
 
-btnPopupClose.addEventListener('click', function() {
+function closeProfilEdit(){
   popup.classList.remove('popup-wrapper_active');
-});
+}
 
-popup.addEventListener('click', function(event) {
-  if (!document.querySelector('.popup').contains(event.target) && popup.classList.contains('popup-wrapper_active')){
-    popup.classList.remove('popup-wrapper_active');
-  }
-});
-
-function formSubmitHandler(evt) {
-  evt.preventDefault();
+function formSubmitHandler(event) {
+  event.preventDefault();
 
   nameField.textContent = nameInput.value;
   jobField.textContent = jobInput.value;
 
-  popup.classList.remove('popup-wrapper_active');
+  closeProfilEdit();
 }
 
+popup.addEventListener('click', function(event) {
+  if (!popupWindow.contains(event.target) && popup.classList.contains('popup-wrapper_active')){
+    closeProfilEdit();
+  }
+});
+
 formElement.addEventListener('submit', formSubmitHandler);
+btnProfileEdit.addEventListener('click', openProfilEdit);
+btnPopupClose.addEventListener('click', closeProfilEdit);

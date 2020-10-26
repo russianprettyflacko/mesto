@@ -12,7 +12,7 @@
   border: none;
   outline: none;
   background-color: initial;
-  background-image: url('../../../images/popup__close.png');
+  background-image: url('../../../images/popup__close.svg');
   background-repeat: no-repeat;
   background-position: center;
 }

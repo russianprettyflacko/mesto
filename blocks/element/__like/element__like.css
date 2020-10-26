@@ -3,6 +3,9 @@
   height: 18.13px;
   margin-left: auto;
 
+  cursor: pointer;
+  transition: .5s opacity;
+
   border: none;
   outline: none;
   background-color: initial;
@@ -10,4 +13,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.element__like:hover {
+  transition: .5s opacity;
+
+  opacity: .6;
 }

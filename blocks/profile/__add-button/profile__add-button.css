@@ -9,8 +9,8 @@
   border: 2px solid #fff;
   border-radius: 2px;
   outline: none;
-  background-color: #000;
-  background-image: url('../../../images/profile__add-button.png');
+  background-color: initial;
+  background-image: url('../../../images/profile__add-button.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
