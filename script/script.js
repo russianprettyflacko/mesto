@@ -106,6 +106,7 @@ const cards = document.querySelector('.elements');
 initialCards.forEach(function (item) {
   let card = cardTemplate.cloneNode(true);
   card.querySelector('.element__title').textContent = item.name;
+  card.querySelector('.element__cover').alt = item.name;
   card.querySelector('.element__cover').src = item.link;
   cards.prepend(card);
 });
@@ -118,6 +119,7 @@ function cardAddSubmit(event) {
 
   let card = cardTemplate.cloneNode(true);
   card.querySelector('.element__title').textContent = titleValue.value;
+  card.querySelector('.element__cover').alt = titleValue.value;
   card.querySelector('.element__cover').src = imgValue.value;
   titleValue.value = '';
   imgValue.value = '';
@@ -143,7 +145,8 @@ function imageOpen(src, title) {
     popupImageWindow.querySelector('.popup-image__image').remove();
   }
 
-  image.classList.add('popup-image__image')
+  image.classList.add('popup-image__image');
+  image.alt = title;
   image.src = src;
   popupImageWindow.prepend(image);
   popupImage.classList.add('popup-wrapper_active');
