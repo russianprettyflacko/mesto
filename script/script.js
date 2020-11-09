@@ -113,7 +113,7 @@ initialCards.forEach(function (item) {
 let titleValue = document.querySelector('#card-add__title');
 let imgValue = document.querySelector('#card-add__img');
 
-function formProfileSubmit(event) {
+function cardAddSubmit(event) {
   event.preventDefault();
 
   let card = cardTemplate.cloneNode(true);
@@ -126,7 +126,7 @@ function formProfileSubmit(event) {
   closeCardAdd();
 }
 
-formCardAdd.addEventListener('submit', formProfileSubmit);
+formCardAdd.addEventListener('submit', cardAddSubmit);
 
 // Изображение (попап)
 
