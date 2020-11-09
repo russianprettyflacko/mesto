@@ -5,6 +5,8 @@
 
   margin: 0;
   padding-bottom: 54px;
+
+  cursor: default;
 }
 
 @media (max-width: 767px) {

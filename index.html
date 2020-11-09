@@ -13,6 +13,7 @@
     <header class="header">
       <img src="./images/logo.svg" alt="Логотип" class="header__logo">
     </header>
+
     <main class="content">
       <section class="profile">
         <div class="profile-info">
@@ -23,68 +24,61 @@
         </div>
         <button type="button" class="profile__add-button"></button>
       </section>
-      <section class="elements">
-        <div class="element">
-          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Карачаевск</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Гора Эльбрус</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/dombay.jpg" alt="Домбай" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Домбай</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Гора Эльбрус</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/dombay.jpg" alt="Домбай" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Домбай</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__cover">
-          <div class="element__info">
-            <p class="element__title">Карачаево-Черкеск</p>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-      </section>
-      <section class="popup-wrapper">
+
+      <section class="elements"></section>
+
+      <section class="popup-wrapper" id="profile-edit">
         <div class="popup">
           <h3 class="popup__title">Редактировать профиль</h3>
           <form class="profile-edit" name="profile-edit">
-            <input class="profile-edit__field" type="text" name="profile-edit__title" id="profile-edit__title"
+            <input class="profile-edit__field" type="text" name="profile-edit__name" id="profile-edit__name"
               placeholder="Имя">
-            <input class="profile-edit__field" type="text" name="profile-edit__subtitle" id="profile-edit__subtitle"
+            <input class="profile-edit__field" type="text" name="profile-edit__job" id="profile-edit__job"
               placeholder="Описание">
             <button class="profile-edit__submit">Сохранить</button>
           </form>
           <button type="button" class="popup__close"></button>
         </div>
       </section>
+
+      <section class="popup-wrapper" id="card-add">
+        <div class="popup">
+          <h3 class="popup__title">Новое место</h3>
+          <form class="card-add" name="card-add">
+            <input class="card-add__field" type="text" name="card-add__title" id="card-add__title"
+              placeholder="Название">
+            <input class="card-add__field" type="text" name="card-add__subtitle" id="card-add__img"
+              placeholder="Ссылка на картинку">
+            <button class="card-add__submit">Создать</button>
+          </form>
+          <button type="button" class="popup__close"></button>
+        </div>
+      </section>
+
+      <section class="popup-wrapper" id="popup-image">
+        <div class="popup-image">
+          <div class="popup-image__title"></div>
+          <button type="button" class="popup__close"></button>
+        </div>
+      </section>
     </main>
+
     <footer class="footer">
       <p class="footer__copy">© 2020 Mesto Russia</p>
     </footer>
   </div>
+
+  <template id="card">
+    <div class="element">
+      <img src="" alt="" class="element__cover">
+      <div class="element__info">
+        <p class="element__title"></p>
+        <button type="button" class="element__like"></button>
+      </div>
+      <button type="button" class="element__delete"></button>
+    </div>
+  </template>
+
   <script src="./script/script.js"></script>
 </body>
 

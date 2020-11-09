@@ -1,0 +1,5 @@
+.card-add {
+  display: flex;
+
+  flex-wrap: wrap;
+}
