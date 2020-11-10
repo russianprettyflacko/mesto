@@ -135,7 +135,7 @@ formCardAdd.addEventListener('submit', cardAddSubmit);
 let popupImage = document.querySelector('#popup-image');
 let popupImageWindow = document.querySelector('#popup-image .popup-image');
 let popupImageTitle = document.querySelector('#popup-image .popup-image__title');
-let btnImageClose = document.querySelector('#popup-image .popup__close');
+let btnImageClose = document.querySelector('#popup-image .popup-image__close');
 
 function imageOpen(src, title) {
   let image = new Image;
