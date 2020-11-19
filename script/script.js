@@ -169,9 +169,11 @@ function cardCreate(item) {
     event.target.parentElement.remove();
   });
 
+  if (item.link) {
+    cardCover.alt = item.name;
+    cardCover.src = item.link;
+  }
   cardTitle.textContent = item.name;
-  cardCover.alt = item.name;
-  cardCover.src = item.link;
   return card;
 }
 
