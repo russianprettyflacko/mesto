@@ -69,7 +69,7 @@ function cardAddSubmit(event) {
   let item = new Array;
   item.name = titleValue.value;
   item.link = imgValue.value;
-  cardCreate(item);
+  cardAdd(cardCreate(item));
   closeCardAdd();
 }
 
@@ -172,9 +172,9 @@ function cardCreate(item) {
   cardTitle.textContent = item.name;
   cardCover.alt = item.name;
   cardCover.src = item.link;
-  cardAdd(card);
+  return card;
 }
 
 initialCards.forEach(function (item) {
-  cardCreate(item);
+  cardAdd(cardCreate(item));
 });
