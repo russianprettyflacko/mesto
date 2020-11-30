@@ -30,11 +30,13 @@
       <section class="popup-wrapper" id="profile-edit">
         <div class="popup">
           <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="profile-edit" name="profile-edit">
+          <form class="form profile-edit" name="profile-edit">
             <input class="profile-edit__field" type="text" name="profile-edit__name" id="profile-edit__name"
-              placeholder="Имя">
+              placeholder="Имя" minlength="2" minlength="40" required>
+            <p class="profile-edit__field-error" id="profile-edit__name-error"></p>
             <input class="profile-edit__field" type="text" name="profile-edit__job" id="profile-edit__job"
-              placeholder="Описание">
+              placeholder="Описание" minlength="2" minlength="200" required>
+            <p class="profile-edit__field-error" id="profile-edit__job-error"></p>
             <button class="profile-edit__submit">Сохранить</button>
           </form>
           <button type="button" class="popup__close"></button>
@@ -44,11 +46,13 @@
       <section class="popup-wrapper" id="card-add">
         <div class="popup">
           <h3 class="popup__title">Новое место</h3>
-          <form class="card-add" name="card-add">
+          <form class="form card-add" name="card-add">
             <input class="card-add__field" type="text" name="card-add__title" id="card-add__title"
-              placeholder="Название">
-            <input class="card-add__field" type="text" name="card-add__subtitle" id="card-add__img"
-              placeholder="Ссылка на картинку">
+              placeholder="Название"  minlength="20" minlength="40" required>
+            <p class="card-add__field-error" id="title-error"></p>
+            <input class="card-add__field" type="url" name="card-add__subtitle" id="card-add__img"
+              placeholder="Ссылка на картинку" required>
+            <p class="card-add__field-error" id="link-error"></p>
             <button class="card-add__submit">Создать</button>
           </form>
           <button type="button" class="popup__close"></button>
@@ -81,6 +85,7 @@
   </template>
 
   <script src="./script/script.js"></script>
+  <script src="./script/validate.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,8 @@
+.card-add__field-error {
+  font-size: 12px;
+  line-height: 15px;
+  height: 15px;
+  margin: 0 0 15px;
+  width: 100%;
+  color: #FF0000;
+}

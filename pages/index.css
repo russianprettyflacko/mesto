@@ -26,9 +26,11 @@
 @import url('../blocks/popup/__close/popup__close.css');
 @import url('../blocks/profile-edit/profile-edit.css');
 @import url('../blocks/profile-edit/__field/profile-edit__field.css');
+@import url('../blocks/profile-edit/__field-error/profile-edit__field-error.css');
 @import url('../blocks/profile-edit/__submit/profile-edit__submit.css');
 @import url('../blocks/card-add/card-add.css');
 @import url('../blocks/card-add/__field/card-add__field.css');
+@import url('../blocks/card-add/__field-error/card-add__field-error.css');
 @import url('../blocks/card-add/__submit/card-add__submit.css');
 @import url('../blocks/popup-image/popup-image.css');
 @import url('../blocks/popup-image/__image/popup-image__image.css');

@@ -103,7 +103,7 @@ function closeCardAdd() {
 btnCardAddClose.addEventListener('click', closeCardAdd);
 
 // Закрыть попап
-function wrapperClose(popup) {
+function wrapperClose(popup = document.querySelector('.popup-wrapper_active')) {
   popup.classList.remove('popup-wrapper_active');
 }
 
@@ -122,6 +122,12 @@ popupProfileEdit.addEventListener('click', function (event) {
 popupImage.addEventListener('click', function (event) {
   if (!popupImageWindow.contains(event.target) && popupImage.classList.contains('popup-wrapper_active')) {
     wrapperClose(popupImage);
+  }
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape') {
+    wrapperClose();
   }
 });
 
