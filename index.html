@@ -29,11 +29,11 @@
     </main>
 
     <section class="popup" id="popup-element">
-      <form class="popup__form" id="form-element" novalidate>
+      <form class="popup__form" id="form-element" autocomplete="off" novalidate>
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" name="title" id="element-title" class="popup__input" placeholder="Название" minlength="2" maxlength="30" autocomplete="off" required>
+        <input type="text" name="title" id="element-title" class="popup__input" placeholder="Название" minlength="2" maxlength="30" required>
         <p class="popup__error element-title-error"></p>
-        <input type="url" name="image" id="element-image" class="popup__input" placeholder="Ссылка на картинку" autocomplete="off" autocomplete="off" required>
+        <input type="url" name="image" id="element-image" class="popup__input" placeholder="Ссылка на картинку" required>
         <p class="popup__error element-image-error"></p>
         <button type="submit" id="element-submit" class="popup__button">Создать</button>
         <button type="button" class="popup__close"></button>
@@ -41,11 +41,11 @@
     </section>
 
     <section class="popup" id="popup-profile">
-      <form class="popup__form" id="form-profile" novalidate>
+      <form class="popup__form" id="form-profile" autocomplete="off" novalidate>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" name="name" id="profile-name" class="popup__input" placeholder="Имя" minlength="2" maxlength="40" autocomplete="off" required>
+        <input type="text" name="name" id="profile-name" class="popup__input" placeholder="Имя" minlength="2" maxlength="40" required>
         <p class="popup__error profile-name-error"></p>
-        <input type="text" name="job" id="profile-job" class="popup__input" placeholder="Описание"  minlength="2" maxlength="200" autocomplete="off" required>
+        <input type="text" name="job" id="profile-job" class="popup__input" placeholder="Описание"  minlength="2" maxlength="200" required>
         <p class="popup__error profile-job-error"></p>
         <button type="submit" id="profile-submit" class="popup__button">Сохранить</button>
         <button type="button" class="popup__close"></button>
