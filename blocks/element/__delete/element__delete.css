@@ -1,22 +1,22 @@
 .element__delete {
-    position: absolute;
-    top: 18px;
-    right: 15px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
 
-    width: 18px;
-    height: 19px;
+  width: 18px;
+  height: 19px;
 
-    cursor: pointer;
-    transition: opacity .3s;
+  cursor: pointer;
+  transition: opacity .3s;
 
-    border: none;
-    outline: none;
-    background-color: initial;
-    background-image: url('../../../images/element__delete.svg');
+  border: none;
+  outline: none;
+  background-color: initial;
+  background-image: url('../../../images/ico-delete.svg');
 }
 
 .element__delete:hover {
-    transition: opacity .3s;
+  transition: opacity .3s;
 
-    opacity: .6;
+  opacity: .6;
 }

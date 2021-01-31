@@ -11,71 +11,63 @@
 <body>
   <div class="page">
     <header class="header">
-      <img src="./images/logo.svg" alt="Логотип" class="header__logo">
+      <img src="./images/logotype.svg" alt="Логотип" class="header__logotype">
     </header>
 
-    <main class="content">
+    <main class="main">
       <section class="profile">
         <div class="profile-info">
           <img src="./images/avatar.jpg" alt="Аватар" class="profile-info__avatar">
-          <h1 class="profile-info__title">Жак-Ив Кусто</h1>
-          <p class="profile-info__subtitle">Исследователь океана</p>
-          <button type="button" class="profile-info__edit-button"></button>
+          <h1 class="profile-info__name">Жак-Ив Кусто</h1>
+          <p class="profile-info__job">Исследователь океана</p>
+          <button type="button" id="edit-profile" class="profile-info__edit-button"></button>
         </div>
-        <button type="button" class="profile__add-button"></button>
+        <button type="button" id="add-element" class="profile__add-button"></button>
       </section>
 
       <section class="elements"></section>
-
-      <section class="popup-wrapper" id="profile-edit">
-        <div class="popup">
-          <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="form profile-edit" name="profile-edit">
-            <input class="profile-edit__field" type="text" name="profile-edit__name" id="profile-edit__name"
-              placeholder="Имя" minlength="2" minlength="40" required>
-            <p class="profile-edit__field-error" id="profile-edit__name-error"></p>
-            <input class="profile-edit__field" type="text" name="profile-edit__job" id="profile-edit__job"
-              placeholder="Описание" minlength="2" minlength="200" required>
-            <p class="profile-edit__field-error" id="profile-edit__job-error"></p>
-            <button class="profile-edit__submit">Сохранить</button>
-          </form>
-          <button type="button" class="popup__close"></button>
-        </div>
-      </section>
-
-      <section class="popup-wrapper" id="card-add">
-        <div class="popup">
-          <h3 class="popup__title">Новое место</h3>
-          <form class="form card-add" name="card-add">
-            <input class="card-add__field" type="text" name="card-add__title" id="card-add__title"
-              placeholder="Название"  minlength="20" minlength="40" required>
-            <p class="card-add__field-error" id="title-error"></p>
-            <input class="card-add__field" type="url" name="card-add__subtitle" id="card-add__img"
-              placeholder="Ссылка на картинку" required>
-            <p class="card-add__field-error" id="link-error"></p>
-            <button class="card-add__submit">Создать</button>
-          </form>
-          <button type="button" class="popup__close"></button>
-        </div>
-      </section>
-
-      <section class="popup-wrapper" id="popup-image">
-        <div class="popup-image">
-          <img class="popup-image__image" src="./images/image-not-found.jpg" alt="Изображение не найдено">
-          <div class="popup-image__title"></div>
-          <button type="button" class="popup-image__close"></button>
-        </div>
-      </section>
     </main>
 
+    <section class="popup" id="popup-element">
+      <form class="popup__form" id="form-element" novalidate>
+        <h3 class="popup__title">Новое место</h3>
+        <input type="text" name="title" id="element-title" class="popup__input" placeholder="Название" minlength="2" maxlength="30" autocomplete="off" required>
+        <p class="popup__error element-title-error"></p>
+        <input type="url" name="image" id="element-image" class="popup__input" placeholder="Ссылка на картинку" autocomplete="off" autocomplete="off" required>
+        <p class="popup__error element-image-error"></p>
+        <button type="submit" id="element-submit" class="popup__button">Создать</button>
+        <button type="button" class="popup__close"></button>
+      </form>
+    </section>
+
+    <section class="popup" id="popup-profile">
+      <form class="popup__form" id="form-profile" novalidate>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" name="name" id="profile-name" class="popup__input" placeholder="Имя" minlength="2" maxlength="40" autocomplete="off" required>
+        <p class="popup__error profile-name-error"></p>
+        <input type="text" name="job" id="profile-job" class="popup__input" placeholder="Описание"  minlength="2" maxlength="200" autocomplete="off" required>
+        <p class="popup__error profile-job-error"></p>
+        <button type="submit" id="profile-submit" class="popup__button">Сохранить</button>
+        <button type="button" class="popup__close"></button>
+      </form>
+    </section>
+
+    <section class="popup" id="popup-image">
+      <div class="popup-image">
+        <img class="popup-image__image" src="./images/image-not-found.jpg" alt="Изображение не найдено">
+        <div class="popup-image__title"></div>
+        <button type="button" class="popup__close"></button>
+      </div>
+    </section>
+
     <footer class="footer">
-      <p class="footer__copy">© 2020 Mesto Russia</p>
+      <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
   </div>
 
-  <template id="card">
+  <template id="element">
     <div class="element">
-      <img class="element__cover" src="./images/image-not-found.jpg" alt="Изображение не найдено">
+      <img src="./images/image-not-found.jpg" alt="Изображение не найдено" class="element__cover">
       <div class="element__info">
         <p class="element__title"></p>
         <button type="button" class="element__like"></button>

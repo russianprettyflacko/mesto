@@ -4,12 +4,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-@media (max-width: 767px) {
-  .profile {
-    width: 282px;
-    margin: auto;
-
-    flex-wrap: wrap;
-  }
-}

@@ -1,4 +1,4 @@
-.profile-info__subtitle {
+.profile-info__job {
   font-size: 18px;
   font-style: normal;
   line-height: 22px;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 767px) {
-  .profile-info__subtitle {
+  .profile-info__job {
     font-size: 14px;
     line-height: 17px;
 

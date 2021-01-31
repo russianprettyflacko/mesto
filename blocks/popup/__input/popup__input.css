@@ -1,10 +1,10 @@
-.profile-edit__field {
+.popup__input {
   font-size: 14px;
   line-height: 17px;
 
   width: 100%;
   margin-bottom: 5px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 767px) {
-  .profile-edit__field {
+  .popup__input {
     padding-bottom: 10px;
   }
 }

@@ -10,7 +10,7 @@
   border-radius: 2px;
   outline: none;
   background-color: initial;
-  background-image: url('../../../images/profile__add-button.svg');
+  background-image: url('../../../images/ico-add.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
