@@ -1,31 +1,3 @@
-// Открыть/Закрыть попап
-
-function popupOpen(popup) {
-  const closeBtn = popup.querySelector('.popup__close');
-
-  popup.classList.add('popup_show');
-
-  closeBtn.addEventListener('click', function () {
-    popupClose(popup);
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      popupClose(popup);
-    }
-  });
-
-  popup.addEventListener('click', function (event) {
-    if (!popup.firstElementChild.contains(event.target) && popup.classList.contains('popup_show')) {
-      popupClose(popup);
-    }
-  });
-}
-
-function popupClose(popup) {
-  popup.classList.remove('popup_show');
-}
-
 // Форма - Редактирование профиля
 const editProfilePopup = document.querySelector('#popup-profile');
 const formProfile = document.querySelector('#form-profile');
@@ -159,3 +131,41 @@ function imageOpen(src, title) {
   imagePopupTitle.textContent = title;
   popupOpen(imagePopup);
 }
+
+// Открыть/Закрыть попап
+function popupOpen(popup) {
+  popup.classList.add('popup_show');
+  document.addEventListener('keydown', popupKeydownClose);
+}
+
+function popupClose(popup) {
+  popup.classList.remove('popup_show');
+  document.removeEventListener('keydown', popupKeydownClose);
+}
+
+function popupKeydownClose(event) {
+  if (event.target = 'Escape') {
+    const activePopup = document.querySelector('.popup_show');
+    popupClose(activePopup);
+  }
+}
+
+const popupEventListeners = function () {
+  const popupList = Array.from(document.querySelectorAll('.popup'));
+
+  popupList.forEach((popup) => {
+    let closeBtn = popup.querySelector('.popup__close');
+
+    popup.addEventListener('click', function (event) {
+      if (!popup.firstElementChild.contains(event.target) && popup.classList.contains('popup_show')) {
+        popupClose(popup);
+      }
+    });
+
+    closeBtn.addEventListener('click', function () {
+      popupClose(popup);
+    });
+  });
+};
+
+popupEventListeners();
